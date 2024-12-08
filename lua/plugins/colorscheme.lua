@@ -1,11 +1,11 @@
 return {
   {
-    { "Mofiqul/vscode.nvim" }
+    { "marko-cerovac/material.nvim" },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode"
+      colorscheme = "material",
     },
   },
 }
