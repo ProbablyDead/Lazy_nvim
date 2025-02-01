@@ -6,5 +6,6 @@ return {
     { "mini.pairs",        enabled = false },
     { "noice.nvim",        enabled = false },
     { "persistence.nvim",  enabled = false },
+    { "neo-tree.nvim",     enabled = false },
     { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
 }
