@@ -3,8 +3,8 @@ return {
         "catppuccin/nvim",
         lazy = false,
         priority = 1000,
-        config = function()
-            vim.cmd([[colorscheme catppuccin]])
-        end,
+        init = function()
+            vim.cmd("colorscheme catppuccin")
+        end
     }
 }

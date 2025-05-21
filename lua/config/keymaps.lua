@@ -27,5 +27,8 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "[g", function() vim.diagnostic.goto_next() end)
 vim.keymap.set("n", "]g", function() vim.diagnostic.goto_prev() end)
 vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
+vim.keymap.set('n', '<space>ca', function()
+    vim.lsp.buf.code_action({apply=true}) end, bufopts)
 
 vim.keymap.set("n", "<C-p>", function() vim.cmd.MarkdownPreviewToggle() end)
+
