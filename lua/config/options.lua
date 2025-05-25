@@ -27,5 +27,7 @@ vim.opt.colorcolumn = "80"
 vim.g.material_style = "lighter"
 -- vim.g.material_style = "deep ocean"
 
+vim.g.netrw_liststyle= 1
+
 vim.env.LANG = "en_US.UTF-8"
 vim.env.LC_ALL = "en_US.UTF-8"
