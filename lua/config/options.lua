@@ -24,8 +24,6 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 -- vim.g.mapleader = " "
-vim.g.material_style = "lighter"
--- vim.g.material_style = "deep ocean"
 
 vim.g.netrw_liststyle= 1
 
