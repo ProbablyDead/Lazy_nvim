@@ -92,7 +92,7 @@ return {
                 vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
                 vim.keymap.set('n', '<space>ca', function()
                     vim.lsp.buf.code_action({apply=true}) end, buf_opts)
-
+                vim.keymap.set("n", "gr", "<cmd>FzfLua lsp_references<cr>")
                 end
             },
         },
