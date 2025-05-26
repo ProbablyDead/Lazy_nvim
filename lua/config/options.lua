@@ -17,15 +17,13 @@ vim.opt.incsearch = true
 
 vim.opt.clipboard = ""
 
-vim.termguicolors = true
-
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
--- vim.g.mapleader = " "
-
-vim.g.netrw_liststyle= 1
+-- netrw setup
+vim.g.netrw_liststyle = 1
+vim.g.netrw_sizestyle = "H"
 
 vim.env.LANG = "en_US.UTF-8"
 vim.env.LC_ALL = "en_US.UTF-8"
