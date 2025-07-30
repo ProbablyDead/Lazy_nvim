@@ -22,8 +22,8 @@ return {
         -- the command (and behave more like `:!`), add:
         -- bang_expansion = true,
     }
-    vim.keymap.set("n", "<C-i>", function () vim.cmd('Compile') end)
+    vim.keymap.set("n", "<C-i>", function () vim.cmd('below:Compile') end)
     vim.keymap.set("n", "<C-n>", function () vim.cmd('NextError') end)
-    vim.keymap.set("n", "<C-m>", function () vim.cmd('Recompile') end)
+    vim.keymap.set("n", "<C-m>", function () vim.cmd('below:Recompile') end)
   end
 }
