@@ -87,13 +87,13 @@ return {
                     },
                 })
 
-                vim.keymap.set("n", "[g", function() vim.diagnostic.goto_next() end)
-                vim.keymap.set("n", "]g", function() vim.diagnostic.goto_prev() end)
-                vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
-                vim.keymap.set('n', '<space>ca', function()
-                    vim.lsp.buf.code_action({apply=true}) end, buf_opts)
+                vim.keymap.set("n", "[g", vim.diagnostic.goto_next)
+                vim.keymap.set("n", "]g", vim.diagnostic.goto_prev)
+                vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+                vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action)
                 vim.keymap.set("n", "gr", "<cmd>FzfLua lsp_references<cr>")
-                vim.keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<cr>")
+                vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+                vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
                 end
             },
         },
