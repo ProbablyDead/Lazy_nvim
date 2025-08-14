@@ -1,5 +1,11 @@
 vim.opt.guicursor = "a:block"
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -29,3 +35,4 @@ vim.g.netrw_sizestyle = "H"
 
 vim.env.LANG = "en_US.UTF-8"
 vim.env.LC_ALL = "en_US.UTF-8"
+
