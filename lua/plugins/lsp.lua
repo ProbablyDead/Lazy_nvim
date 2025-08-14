@@ -3,14 +3,10 @@ return {
     opts = {
         ensure_installed = {
             "jdtls",
-            "bashls",
-            "gitlab_ci_ls",
-            "gradle_ls",
             "gopls",
-            "helm_ls",
-            "lua_ls",
-            "nginx_language_server",
             "pyright",
+            "gradle_ls",
+            "kotlin_language_server",
         }
     },
     dependencies = {
@@ -42,25 +38,8 @@ return {
                     },
                 })
 
-                vim.lsp.config('jdtls', {
-                    init_options = {
-                        settings = {
-                            java = {
-                                imports = {
-                                    gradle = {
-                                        wrapper = {
-                                            checksums = {
-                                                {
-                                                    sha256 = "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
-                                                    allowed = true
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                vim.lsp.config('kotlin_language_server', {
+                    filetypes = { "kotlin" , "kotlin-script" }
                 })
 
                 local cmp = require('cmp')
@@ -93,7 +72,7 @@ return {
                 vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action)
                 vim.keymap.set("n", "gr", "<cmd>FzfLua lsp_references<cr>")
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-                vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
+                vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help)
                 end
             },
         },
