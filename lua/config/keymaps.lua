@@ -26,7 +26,8 @@ s("n", "<leader>y", '"+y')
 s("v", "<leader>y", '"+y')
 s("n", "<leader>Y", '"+Y')
 
--- Pane switcing
+-- Paning
+s("n", "<C-s>", ":split<CR>")
 s("n", "<C-h>", ":wincmd h<CR>")
 s("n", "<C-j>", ":wincmd j<CR>")
 s("n", "<C-k>", ":wincmd k<CR>")
