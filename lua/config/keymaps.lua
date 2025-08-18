@@ -27,7 +27,7 @@ s("v", "<leader>y", '"+y')
 s("n", "<leader>Y", '"+Y')
 
 -- Paning
-s("n", "<C-s>", ":split<CR>")
+s("n", "<C-s>", ":split | wincmd j<CR>")
 s("n", "<C-h>", ":wincmd h<CR>")
 s("n", "<C-j>", ":wincmd j<CR>")
 s("n", "<C-k>", ":wincmd k<CR>")
