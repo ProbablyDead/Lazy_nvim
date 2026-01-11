@@ -38,8 +38,15 @@ return {
                     },
                 })
 
+                local lspconfig = require('lspconfig')
+
                 vim.lsp.config('kotlin_language_server', {
-                    filetypes = { "kotlin" , "kotlin-script" }
+                    filetypes = { "kotlin", "kotlin-script" },
+                    -- root_dir = function()
+                    --     return vim.loop.cwd() -- or vim.fn.getcwd()
+                    -- end,
+                    -- cmd = { "kotlin-language-server" },
+                    -- root_dir = require('lspconfig.util').root_pattern('settings.gradle', 'build.gradle', '.git') or vim.fn.getcwd(),
                 })
 
                 local cmp = require('cmp')
